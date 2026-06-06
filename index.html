@@ -461,6 +461,15 @@ section { padding: 120px 48px; position: relative; }
 .card-3 .card-btn { background: var(--purple); color: #fff; }
 .card-3 .card-btn:hover { box-shadow: 0 12px 36px rgba(107,31,255,0.5); }
 
+ /* CARD 6 - QR Max */
+.card-6 { grid-column: span 4; } /* S'alignera parfaitement à côté de Puissance 4 et Pong */
+.card-6 .card-bg { background: linear-gradient(135deg, #6B1FFF 0%, #00D48A 100%); } /* Dégradé Violet vers Menthe */
+.card-6 .card-overlay { background: linear-gradient(to top, rgba(15,13,11,0.6) 0%, transparent 60%); }
+.card-6 .card-tag { background: rgba(255,255,255,0.2); color: #fff; }
+.card-6 .card-name, .card-6 .card-desc { color: #fff; }
+.card-6 .card-btn { background: #fff; color: #6B1FFF; }
+.card-6 .card-btn:hover { box-shadow: 0 12px 36px rgba(107,31,255,0.4); } 
+
 /* CARD 4 - Puissance 4 */
 .card-4 { grid-column: span 4; }
 .card-4 .card-bg { background: linear-gradient(135deg, #00D48A 0%, #0066FF 100%); }
@@ -1003,6 +1012,20 @@ footer {
           </a>
         </div>
       </div>
+<div class="game-card card-6 reveal reveal-delay-3" data-tilt>
+  <div class="card-inner game-card-inner">
+    <div class="card-bg"></div>
+    <div class="card-overlay"></div>
+    <div class="card-emoji">🧩</div>
+    <span class="card-tag">Réflexion / Solo</span>
+    <h3 class="card-name">NOM DU<br>JEU</h3>
+    <p class="card-desc">Description courte et percutante de votre nouveau jeu ou de votre nouvelle application interactive.</p>
+    <a href="https://votre-lien.github.io/" target="_blank" class="card-btn">
+      Jouer maintenant
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
 
       <div class="game-card card-5 reveal reveal-delay-2" data-tilt>
         <div class="card-inner game-card-inner">
