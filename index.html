@@ -469,6 +469,24 @@ section { padding: 120px 48px; position: relative; }
 .card-5 .card-btn { background: #fff; color: var(--pink); }
 .card-5 .card-btn:hover { box-shadow: 0 12px 36px rgba(255,32,112,0.45); }
 
+/* CARD 6 - Air Convers' */
+.card-airconvers { grid-column: span 6; }
+.card-airconvers .card-bg { background: linear-gradient(135deg, #1A0B2E 0%, #003399 100%); }
+.card-airconvers .card-overlay { background: linear-gradient(to top, rgba(0,51,153,0.5) 0%, transparent 60%); }
+.card-airconvers .card-tag { background: rgba(255,255,255,0.2); color: #fff; }
+.card-airconvers .card-name, .card-airconvers .card-desc { color: #fff; }
+.card-airconvers .card-btn { background: #fff; color: #003399; }
+.card-airconvers .card-btn:hover { box-shadow: 0 12px 36px rgba(0,51,153,0.45); }
+
+/* CARD 7 - QR Max */
+.card-qrmax { grid-column: span 6; }
+.card-qrmax .card-bg { background: linear-gradient(135deg, #053a27 0%, #00b374 100%); }
+.card-qrmax .card-overlay { background: linear-gradient(to top, rgba(0,179,116,0.5) 0%, transparent 60%); }
+.card-qrmax .card-tag { background: rgba(255,255,255,0.2); color: #fff; }
+.card-qrmax .card-name, .card-qrmax .card-desc { color: #fff; }
+.card-qrmax .card-btn { background: var(--dark); color: #00b374; }
+.card-qrmax .card-btn:hover { box-shadow: 0 12px 36px rgba(5,58,39,0.5); }
+
 /* Pixel decoration on runner card */
 .pixel-deco {
   position: absolute;
@@ -812,7 +830,7 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1100px) {
   .games-grid { grid-template-columns: 1fr 1fr; }
-  .card-1, .card-2, .card-3, .card-4, .card-5 { grid-column: span 2; }
+  .card-1, .card-2, .card-3, .card-4, .card-5, .card-airconvers, .card-qrmax { grid-column: span 2; }
   .card-1, .card-2 { grid-column: span 1; }
   .hero-geo { display: none; }
 }
@@ -823,7 +841,7 @@ footer {
   #hero { padding: 120px 24px 80px; }
   .hero-title { font-size: clamp(4.5rem, 18vw, 8rem); }
   .games-grid { grid-template-columns: 1fr; }
-  .card-1, .card-2, .card-3, .card-4, .card-5 { grid-column: span 1; }
+  .card-1, .card-2, .card-3, .card-4, .card-5, .card-airconvers, .card-qrmax { grid-column: span 1; }
   #about { grid-template-columns: 1fr; gap: 50px; padding: 80px 24px; }
   footer { flex-direction: column; text-align: center; padding: 48px 24px 32px; }
   .footer-copy { text-align: center; }
@@ -833,16 +851,13 @@ footer {
 </head>
 <body>
 
-<!-- ===== CANVAS BACKGROUND ===== -->
 <canvas id="bg-canvas"></canvas>
 
-<!-- ===== CURSORS ===== -->
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 
 <div class="site-wrapper">
 
-  <!-- ===== NAV ===== -->
   <nav>
     <a class="nav-logo" href="#hero">MAX<span>.</span>HUB</a>
     <ul class="nav-links">
@@ -852,7 +867,6 @@ footer {
     </ul>
   </nav>
 
-  <!-- ===== HERO ===== -->
   <section id="hero">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
@@ -878,7 +892,6 @@ footer {
       </div>
     </div>
 
-    <!-- Animated geometric figure -->
     <div class="hero-geo">
       <svg viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation: rotateSlow 30s linear infinite; transform-origin: center center;">
         <circle cx="190" cy="190" r="160" stroke="#0F0D0B" stroke-width="1" stroke-dasharray="8 8" opacity="0.15"/>
@@ -895,7 +908,6 @@ footer {
     </div>
   </section>
 
-  <!-- ===== MARQUEE ===== -->
   <div class="marquee-section">
     <div class="marquee-track">
       <span>PIXEL RUNNER</span><span class="dot">✦</span>
@@ -903,24 +915,26 @@ footer {
       <span>ÉCHECS</span><span class="dot">✦</span>
       <span class="accent">PUISSANCE 4</span><span class="dot">✦</span>
       <span>PONG</span><span class="dot">✦</span>
+      <span class="accent">AIR CONVERS'</span><span class="dot">✦</span>
+      <span>QR MAX</span><span class="dot">✦</span>
       <span class="accent">MAXENCE DARDENNE</span><span class="dot">✦</span>
       <span>PIXEL RUNNER</span><span class="dot">✦</span>
       <span class="accent">MORPION</span><span class="dot">✦</span>
       <span>ÉCHECS</span><span class="dot">✦</span>
       <span class="accent">PUISSANCE 4</span><span class="dot">✦</span>
       <span>PONG</span><span class="dot">✦</span>
+      <span class="accent">AIR CONVERS'</span><span class="dot">✦</span>
+      <span>QR MAX</span><span class="dot">✦</span>
       <span class="accent">MAXENCE DARDENNE</span><span class="dot">✦</span>
     </div>
   </div>
 
-  <!-- ===== GAMES SECTION ===== -->
   <section id="games">
     <div class="section-label reveal">Mes créations</div>
     <h2 class="section-title reveal reveal-delay-1">LES<br>JEUX.</h2>
 
     <div class="games-grid">
 
-      <!-- Card 1: Pixel Runner -->
       <div class="game-card card-1 reveal" data-tilt>
         <div class="card-inner game-card-inner">
           <div class="card-bg"></div>
@@ -942,7 +956,6 @@ footer {
         </div>
       </div>
 
-      <!-- Card 2: Morpion -->
       <div class="game-card card-2 reveal reveal-delay-1" data-tilt>
         <div class="card-inner game-card-inner">
           <div class="card-bg"></div>
@@ -958,7 +971,6 @@ footer {
         </div>
       </div>
 
-      <!-- Card 3: Dames -->
       <div class="game-card card-3 reveal" data-tilt>
         <div class="card-inner game-card-inner">
           <div class="card-bg"></div>
@@ -974,7 +986,6 @@ footer {
         </div>
       </div>
 
-      <!-- Card 4: Puissance 4 -->
       <div class="game-card card-4 reveal reveal-delay-1" data-tilt>
         <div class="card-inner game-card-inner">
           <div class="card-bg"></div>
@@ -990,7 +1001,6 @@ footer {
         </div>
       </div>
 
-      <!-- Card 5: Pong -->
       <div class="game-card card-5 reveal reveal-delay-2" data-tilt>
         <div class="card-inner game-card-inner">
           <div class="card-bg"></div>
@@ -1006,10 +1016,39 @@ footer {
         </div>
       </div>
 
+      <div class="game-card card-airconvers reveal" data-tilt>
+        <div class="card-inner game-card-inner">
+          <div class="card-bg"></div>
+          <div class="card-overlay"></div>
+          <div class="card-emoji">🎵</div>
+          <span class="card-tag">Outil / Multimédia</span>
+          <h3 class="card-name">AIR<br>CONVERS'</h3>
+          <p class="card-desc">Convertisseur et extracteur de médias instantané. Télécharge des vidéos et des playlists entières.</p>
+          <a href="https://air-convers.vercel.app/" target="_blank" class="card-btn">
+            Ouvrir l'outil
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="game-card card-qrmax reveal reveal-delay-1" data-tilt>
+        <div class="card-inner game-card-inner">
+          <div class="card-bg"></div>
+          <div class="card-overlay"></div>
+          <div class="card-emoji">🔲</div>
+          <span class="card-tag">Utilitaire / Design</span>
+          <h3 class="card-name">QR<br>MAX</h3>
+          <p class="card-desc">Générateur de QR codes haute performance. Personnalise et exporte tes codes instantanément.</p>
+          <a href="#" class="card-btn">
+            Lancer QR Max
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
   <section id="about">
     <div>
       <div class="section-label about-label reveal">Le créateur</div>
@@ -1017,7 +1056,7 @@ footer {
       <p class="about-text reveal reveal-delay-2">Développeur passionné, créateur de jeux et d'expériences numériques. Chaque projet ici est le fruit d'une réflexion poussée sur l'expérience utilisateur et le plaisir de jouer. Entièrement conçu, codé et animé de zéro.</p>
       <div class="about-stats reveal reveal-delay-3">
         <div class="stat-item">
-          <div class="stat-num">5</div>
+          <div class="stat-num">7</div>
           <div class="stat-label">Jeux créés</div>
         </div>
         <div class="stat-item">
@@ -1054,7 +1093,6 @@ footer {
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
   <section id="cta">
     <h2 class="cta-title reveal">PRÊT À<br>JOUER ?</h2>
     <p class="cta-sub reveal reveal-delay-1">Choisis ton aventure et plonge dans l'expérience.</p>
@@ -1064,7 +1102,6 @@ footer {
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-logo">MAX<span>.</span>HUB</div>
     <div class="footer-sig">
@@ -1074,9 +1111,7 @@ footer {
     <div class="footer-copy">© 2026 — Tous droits réservés</div>
   </footer>
 
-</div><!-- /site-wrapper -->
-
-<script>
+</div><script>
 /* ===== ANIMATED CANVAS BACKGROUND ===== */
 (function() {
   const canvas = document.getElementById('bg-canvas');
